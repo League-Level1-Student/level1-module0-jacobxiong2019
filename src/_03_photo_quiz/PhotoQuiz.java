@@ -13,6 +13,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 public class PhotoQuiz {
 
@@ -25,18 +26,19 @@ public class PhotoQuiz {
 
 		// 1. find an image on the internet, and put its URL in a String
 		// variable (from your browser, right click on the image, and select
-		// “Copy Image Address”)
-
+		// â€œCopy Image Addressâ€�)
+		String image = "https://cms.qz.com/wp-content/uploads/2018/03/pi-symbol.png?w=350&h=339&crop=1&strip=all&quality=75";
 		// 2. create a variable of type "Component" that will hold your image
-
+		Component c;
+		c = createImage(image);
 		// 3. use the "createImage()" method below to initialize your Component
-
+		
 		// 4. add the image to the quiz window
-
+		quizWindow.add(c);
 		// 5. call the pack() method on the quiz window
-
+		quizWindow.pack();
 		// 6. ask a question that relates to the image
-
+		
 		// 7. print "CORRECT" if the user gave the right answer
 
 		// 8. print "INCORRECT" if the answer is wrong
@@ -55,6 +57,11 @@ public class PhotoQuiz {
 
 		// 14+ check answer, say if correct or incorrect, etc.
 
+	}
+
+	private Object loadImage() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 	private Component createImage(String imageUrl) throws MalformedURLException {
