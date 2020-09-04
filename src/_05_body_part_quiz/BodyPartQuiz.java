@@ -1,5 +1,7 @@
 package _05_body_part_quiz;
 
+import java.awt.Frame;
+
 /*
  *    Copyright (c) The League of Amazing Programmers 2013-2019
  *    Level 1
@@ -39,6 +41,8 @@ public class BodyPartQuiz {
 		imageIterator = imageList.iterator();
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.add(panel);
+		
+		
 
 		// 3. Change the size of the window so that you can only see part of the
 		// image.
@@ -51,15 +55,23 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-
+		int i = 0;
 		// 2. Set the size of the window in the initializeGui() method 
-
+		
 		// 4. Ask the user who this person is and store their answer
-		String guess = JOptionPane.showInputDialog("who is this?");
+		String guess = JOptionPane.showInputDialog("who is this? (First name)");
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-
+		if(guess.equalsIgnoreCase("Arnold"))
+		{
+			i++;
+		}
+		else
+		{
+			JOptionPane.showMessageDialog(null, "incorrect. The person was arnold");
+		}
+		
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
 
